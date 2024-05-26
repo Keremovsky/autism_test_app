@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import '../../../gen/locale_keys.g.dart';
 
 @RoutePage()
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
