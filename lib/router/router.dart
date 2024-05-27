@@ -3,10 +3,10 @@ import 'package:autism_test_app/features/home/view/home_view.dart';
 
 part 'router.gr.dart';
 
-@AutoRouterConfig(replaceInRouteName: "Screen,Route,View")
+@AutoRouterConfig(replaceInRouteName: "Screen|Route|View")
 class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: HomeRoute.page, initial: true),
+        AutoRoute(page: HomeViewRoute.page, initial: true),
       ];
 }
