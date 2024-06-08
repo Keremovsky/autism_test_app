@@ -1,4 +1,3 @@
-import 'package:autism_test_app/core/constants/colors.dart';
 import 'package:autism_test_app/core/extensions/context_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,6 +8,7 @@ class CustomTextField extends HookWidget {
   final List<TextInputFormatter>? inputFormatters;
   final ValueChanged<String>? onChanged;
   final ValueChanged<String?>? onSaved;
+  final ValueChanged<String>? onFieldSubmitted;
   final TextEditingController? controller;
   final TextInputAction? textInputAction;
   final FormFieldValidator<String>? validator;
@@ -44,6 +44,7 @@ class CustomTextField extends HookWidget {
     this.inputFormatters,
     this.onChanged,
     this.onSaved,
+    this.onFieldSubmitted,
     this.controller,
     this.textInputAction,
     this.validator,
@@ -81,13 +82,14 @@ class CustomTextField extends HookWidget {
     return TextFormField(
       key: formFieldKey,
       initialValue: initialValue,
-      style: style ?? context.bodyMedium,
+      style: style ?? context.displayLarge,
       inputFormatters: inputFormatters,
       autovalidateMode: autovalidateMode,
       controller: controller,
       focusNode: focusNode,
       onChanged: onChanged,
       onSaved: onSaved,
+      onFieldSubmitted: onFieldSubmitted,
       obscureText: obscureText,
       textInputAction: textInputAction ?? TextInputAction.next,
       validator: validator,
@@ -100,7 +102,7 @@ class CustomTextField extends HookWidget {
       decoration: InputDecoration(
         enabled: enabled,
         contentPadding: contentPadding,
-        fillColor: fillColor ?? ColorConstant.inputAreaBackground,
+        fillColor: fillColor,
         hintText: hintText,
         hintStyle: hintStyle,
         labelText: labelText,

@@ -8,7 +8,7 @@ class ThemeConstant {
     style: ButtonStyle(
       minimumSize: WidgetStatePropertyAll(Size.fromHeight(40.h)),
       backgroundColor: WidgetStateProperty.resolveWith<Color>(
-        (states) => ColorConstant.mainColor,
+        (states) => ColorConstant.main,
       ),
       side: const WidgetStatePropertyAll(BorderSide.none),
       padding: const WidgetStatePropertyAll(EdgeInsets.zero),
@@ -23,7 +23,7 @@ class ThemeConstant {
 
   static final inputDecorationTheme = InputDecorationTheme(
     filled: true,
-    fillColor: ColorConstant.inputAreaBackground,
+    fillColor: ColorConstant.scaffoldBackground,
     hintStyle: TextStyleConstant.bodyMedium,
     floatingLabelBehavior: FloatingLabelBehavior.auto,
     errorStyle: TextStyleConstant.bodySmall,

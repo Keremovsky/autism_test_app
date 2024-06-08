@@ -10,7 +10,7 @@ class TextStyleConstant {
     color: ColorConstant.whiteText,
   );
 
-  /// text button's text
+  /// input area text, question text and result page texts
   static final displayLarge = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: FontSizeConstant.fontSize20,

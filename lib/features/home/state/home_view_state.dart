@@ -13,12 +13,17 @@ abstract class HomeViewState<T extends StatefulWidget> extends State<T> {
     log(value ?? "empty");
   }
 
-  String? validateField(String? value) {
+  String? validateAgeField(String? value) {
     final control = InputFieldValidator.validateEmptiness(value);
     return control.toNullable()?.message;
   }
 
-  void validateFieldTap() {
+  String? validateGenderField(String? value) {
+    final control = InputFieldValidator.validateNullability(value);
+    return control.toNullable()?.message;
+  }
+
+  void validateFormTap() {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
     }

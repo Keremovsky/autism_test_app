@@ -10,4 +10,12 @@ class InputFieldValidator {
 
     return none();
   }
+
+  static Option<ValueFailureModel> validateNullability<T>(T? input, {String? customMessage}) {
+    if (input == null) {
+      return some(ValueFailureModel.invalidInput(customMessage ?? "Null input is not allowed!"));
+    }
+
+    return none();
+  }
 }

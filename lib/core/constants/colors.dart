@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class ColorConstant {
-  static const mainColor = Color.fromRGBO(33, 85, 138, 1);
+  static const main = Color.fromRGBO(33, 85, 138, 1);
   static const green = Color.fromRGBO(30, 204, 53, 1);
   static const yellow = Color.fromRGBO(236, 236, 34, 1);
   static const red = Color.fromRGBO(229, 0, 2, 1);
@@ -14,8 +14,9 @@ class ColorConstant {
   static const dropdownMenuIcon = Color.fromRGBO(144, 144, 144, 1);
   static const scaffoldBackground = Color.fromRGBO(249, 249, 249, 1);
 
-  static const inputAreaBackground = Color.fromRGBO(230, 230, 230, 1);
+  static const inputAreaSelectedBackground = Color.fromRGBO(52, 134, 218, 0.2);
   static const inputAreaBorder = Color.fromRGBO(208, 208, 208, 1);
   static const inputAreaFocusedBorder = Color.fromRGBO(52, 134, 218, 0.8);
   static const inputAreaErrorBorder = Color.fromRGBO(229, 0, 2, 0.75);
+  static const inputAreaIcon = Color.fromRGBO(144, 144, 144, 1);
 }
