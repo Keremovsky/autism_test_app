@@ -7,7 +7,7 @@ abstract interface class INetworkService {
   void removeHeader(NetworkHeaderKeys key);
   void setToken(String token);
   void removeToken();
-  Future<Either<FailureModel, Response<Map<String, dynamic>>>> get(String url);
-  Future<Either<FailureModel, Response<Map<String, dynamic>>>> post(String url,
+  Future<Either<ConnectionFailureModel, Response<Map<String, dynamic>>>> get(String url);
+  Future<Either<ConnectionFailureModel, Response<Map<String, dynamic>>>> post(String url,
       {required dynamic data});
 }

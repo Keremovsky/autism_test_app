@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:autism_test_app/core/constants/network_constants.dart';
 import 'package:autism_test_app/core/enums/network_keys_enum.dart';
 import 'package:autism_test_app/core/extensions/response_extension.dart';
-import 'package:autism_test_app/core/models/failure_model/failure_model.dart';
+import 'package:autism_test_app/core/models/connection_failure_model/connection_failure_model.dart';
 import 'package:autism_test_app/core/services/connectivity/connectivity_service.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -58,19 +58,19 @@ class NetworkService implements INetworkService {
   }
 
   @override
-  Future<Either<FailureModel, Response<Map<String, dynamic>>>> get(String url) async {
+  Future<Either<ConnectionFailureModel, Response<Map<String, dynamic>>>> get(String url) async {
     return await _doRequest(() => _dio.get(url));
   }
 
   @override
-  Future<Either<FailureModel, Response<Map<String, dynamic>>>> post(
+  Future<Either<ConnectionFailureModel, Response<Map<String, dynamic>>>> post(
     String url, {
     required dynamic data,
   }) async {
     return await _doRequest(() => _dio.post(url, data: data));
   }
 
-  Future<Either<FailureModel, Response<Map<String, dynamic>>>> _doRequest(
+  Future<Either<ConnectionFailureModel, Response<Map<String, dynamic>>>> _doRequest(
       AsyncValueGetter<Response<Map<String, dynamic>>> operation) async {
     try {
       if (await _connectivityService.isConnected) {
@@ -78,21 +78,23 @@ class NetworkService implements INetworkService {
 
         if (!result.isSuccess) {
           log(result.data.toString());
-          return Left(FailureModel.responseError(result.data?["message"] as String? ?? ""));
+          return Left(
+            ConnectionFailureModel.responseError(result.data?["message"] as String? ?? ""),
+          );
         }
 
         return Right(result);
       } else {
-        return const Left(FailureModel.noConnection(""));
+        return const Left(ConnectionFailureModel.noConnection(""));
       }
     } on TimeoutException {
-      return const Left(FailureModel.connectionTimedOut(""));
+      return const Left(ConnectionFailureModel.connectionTimedOut(""));
     } on DioException catch (e) {
       log(e.message ?? "");
-      return const Left(FailureModel.responseError(""));
+      return const Left(ConnectionFailureModel.responseError(""));
     } catch (e) {
       log(e.toString());
-      return const Left(FailureModel.unknownError(""));
+      return const Left(ConnectionFailureModel.unknownError(""));
     }
   }
 }

@@ -8,4 +8,5 @@ final theme = ThemeData(
   scaffoldBackgroundColor: ColorConstant.scaffoldBackground,
   textTheme: ThemeConstant.textTheme,
   textButtonTheme: ThemeConstant.textButtonThemeData,
+  inputDecorationTheme: ThemeConstant.inputDecorationTheme,
 );

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'failure_model.dart';
+part of 'connection_failure_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$FailureModel {
+mixin _$ConnectionFailureModel {
   String get message => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -69,23 +69,24 @@ mixin _$FailureModel {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $FailureModelCopyWith<FailureModel> get copyWith =>
+  $ConnectionFailureModelCopyWith<ConnectionFailureModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FailureModelCopyWith<$Res> {
-  factory $FailureModelCopyWith(
-          FailureModel value, $Res Function(FailureModel) then) =
-      _$FailureModelCopyWithImpl<$Res, FailureModel>;
+abstract class $ConnectionFailureModelCopyWith<$Res> {
+  factory $ConnectionFailureModelCopyWith(ConnectionFailureModel value,
+          $Res Function(ConnectionFailureModel) then) =
+      _$ConnectionFailureModelCopyWithImpl<$Res, ConnectionFailureModel>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$FailureModelCopyWithImpl<$Res, $Val extends FailureModel>
-    implements $FailureModelCopyWith<$Res> {
-  _$FailureModelCopyWithImpl(this._value, this._then);
+class _$ConnectionFailureModelCopyWithImpl<$Res,
+        $Val extends ConnectionFailureModel>
+    implements $ConnectionFailureModelCopyWith<$Res> {
+  _$ConnectionFailureModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -108,7 +109,7 @@ class _$FailureModelCopyWithImpl<$Res, $Val extends FailureModel>
 
 /// @nodoc
 abstract class _$$UnknownErrorImplCopyWith<$Res>
-    implements $FailureModelCopyWith<$Res> {
+    implements $ConnectionFailureModelCopyWith<$Res> {
   factory _$$UnknownErrorImplCopyWith(
           _$UnknownErrorImpl value, $Res Function(_$UnknownErrorImpl) then) =
       __$$UnknownErrorImplCopyWithImpl<$Res>;
@@ -119,7 +120,7 @@ abstract class _$$UnknownErrorImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UnknownErrorImplCopyWithImpl<$Res>
-    extends _$FailureModelCopyWithImpl<$Res, _$UnknownErrorImpl>
+    extends _$ConnectionFailureModelCopyWithImpl<$Res, _$UnknownErrorImpl>
     implements _$$UnknownErrorImplCopyWith<$Res> {
   __$$UnknownErrorImplCopyWithImpl(
       _$UnknownErrorImpl _value, $Res Function(_$UnknownErrorImpl) _then)
@@ -149,7 +150,7 @@ class _$UnknownErrorImpl implements _UnknownError {
 
   @override
   String toString() {
-    return 'FailureModel.unknownError(message: $message)';
+    return 'ConnectionFailureModel.unknownError(message: $message)';
   }
 
   @override
@@ -244,7 +245,7 @@ class _$UnknownErrorImpl implements _UnknownError {
   }
 }
 
-abstract class _UnknownError implements FailureModel {
+abstract class _UnknownError implements ConnectionFailureModel {
   const factory _UnknownError(final String message) = _$UnknownErrorImpl;
 
   @override
@@ -257,7 +258,7 @@ abstract class _UnknownError implements FailureModel {
 
 /// @nodoc
 abstract class _$$NoConnectionImplCopyWith<$Res>
-    implements $FailureModelCopyWith<$Res> {
+    implements $ConnectionFailureModelCopyWith<$Res> {
   factory _$$NoConnectionImplCopyWith(
           _$NoConnectionImpl value, $Res Function(_$NoConnectionImpl) then) =
       __$$NoConnectionImplCopyWithImpl<$Res>;
@@ -268,7 +269,7 @@ abstract class _$$NoConnectionImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NoConnectionImplCopyWithImpl<$Res>
-    extends _$FailureModelCopyWithImpl<$Res, _$NoConnectionImpl>
+    extends _$ConnectionFailureModelCopyWithImpl<$Res, _$NoConnectionImpl>
     implements _$$NoConnectionImplCopyWith<$Res> {
   __$$NoConnectionImplCopyWithImpl(
       _$NoConnectionImpl _value, $Res Function(_$NoConnectionImpl) _then)
@@ -298,7 +299,7 @@ class _$NoConnectionImpl implements _NoConnection {
 
   @override
   String toString() {
-    return 'FailureModel.noConnection(message: $message)';
+    return 'ConnectionFailureModel.noConnection(message: $message)';
   }
 
   @override
@@ -393,7 +394,7 @@ class _$NoConnectionImpl implements _NoConnection {
   }
 }
 
-abstract class _NoConnection implements FailureModel {
+abstract class _NoConnection implements ConnectionFailureModel {
   const factory _NoConnection(final String message) = _$NoConnectionImpl;
 
   @override
@@ -406,7 +407,7 @@ abstract class _NoConnection implements FailureModel {
 
 /// @nodoc
 abstract class _$$ConnectionTimedOutImplCopyWith<$Res>
-    implements $FailureModelCopyWith<$Res> {
+    implements $ConnectionFailureModelCopyWith<$Res> {
   factory _$$ConnectionTimedOutImplCopyWith(_$ConnectionTimedOutImpl value,
           $Res Function(_$ConnectionTimedOutImpl) then) =
       __$$ConnectionTimedOutImplCopyWithImpl<$Res>;
@@ -417,7 +418,7 @@ abstract class _$$ConnectionTimedOutImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ConnectionTimedOutImplCopyWithImpl<$Res>
-    extends _$FailureModelCopyWithImpl<$Res, _$ConnectionTimedOutImpl>
+    extends _$ConnectionFailureModelCopyWithImpl<$Res, _$ConnectionTimedOutImpl>
     implements _$$ConnectionTimedOutImplCopyWith<$Res> {
   __$$ConnectionTimedOutImplCopyWithImpl(_$ConnectionTimedOutImpl _value,
       $Res Function(_$ConnectionTimedOutImpl) _then)
@@ -447,7 +448,7 @@ class _$ConnectionTimedOutImpl implements _ConnectionTimedOut {
 
   @override
   String toString() {
-    return 'FailureModel.connectionTimedOut(message: $message)';
+    return 'ConnectionFailureModel.connectionTimedOut(message: $message)';
   }
 
   @override
@@ -543,7 +544,7 @@ class _$ConnectionTimedOutImpl implements _ConnectionTimedOut {
   }
 }
 
-abstract class _ConnectionTimedOut implements FailureModel {
+abstract class _ConnectionTimedOut implements ConnectionFailureModel {
   const factory _ConnectionTimedOut(final String message) =
       _$ConnectionTimedOutImpl;
 
@@ -557,7 +558,7 @@ abstract class _ConnectionTimedOut implements FailureModel {
 
 /// @nodoc
 abstract class _$$ResponseErrorImplCopyWith<$Res>
-    implements $FailureModelCopyWith<$Res> {
+    implements $ConnectionFailureModelCopyWith<$Res> {
   factory _$$ResponseErrorImplCopyWith(
           _$ResponseErrorImpl value, $Res Function(_$ResponseErrorImpl) then) =
       __$$ResponseErrorImplCopyWithImpl<$Res>;
@@ -568,7 +569,7 @@ abstract class _$$ResponseErrorImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ResponseErrorImplCopyWithImpl<$Res>
-    extends _$FailureModelCopyWithImpl<$Res, _$ResponseErrorImpl>
+    extends _$ConnectionFailureModelCopyWithImpl<$Res, _$ResponseErrorImpl>
     implements _$$ResponseErrorImplCopyWith<$Res> {
   __$$ResponseErrorImplCopyWithImpl(
       _$ResponseErrorImpl _value, $Res Function(_$ResponseErrorImpl) _then)
@@ -598,7 +599,7 @@ class _$ResponseErrorImpl implements _ResponseError {
 
   @override
   String toString() {
-    return 'FailureModel.responseError(message: $message)';
+    return 'ConnectionFailureModel.responseError(message: $message)';
   }
 
   @override
@@ -693,7 +694,7 @@ class _$ResponseErrorImpl implements _ResponseError {
   }
 }
 
-abstract class _ResponseError implements FailureModel {
+abstract class _ResponseError implements ConnectionFailureModel {
   const factory _ResponseError(final String message) = _$ResponseErrorImpl;
 
   @override

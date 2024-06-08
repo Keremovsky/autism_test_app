@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ThemeConstant {
   static final textButtonThemeData = TextButtonThemeData(
     style: ButtonStyle(
-      minimumSize: WidgetStatePropertyAll(Size.fromHeight(54.r)),
+      minimumSize: WidgetStatePropertyAll(Size.fromHeight(40.h)),
       backgroundColor: WidgetStateProperty.resolveWith<Color>(
         (states) => ColorConstant.mainColor,
       ),
@@ -21,11 +21,47 @@ class ThemeConstant {
     ),
   );
 
+  static final inputDecorationTheme = InputDecorationTheme(
+    filled: true,
+    fillColor: ColorConstant.inputAreaBackground,
+    hintStyle: TextStyleConstant.bodyMedium,
+    floatingLabelBehavior: FloatingLabelBehavior.auto,
+    errorStyle: TextStyleConstant.bodySmall,
+    errorMaxLines: 1,
+    contentPadding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 4.h),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.r),
+      borderSide: BorderSide(color: ColorConstant.inputAreaBorder, width: 1.r),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.r),
+      borderSide: BorderSide(color: ColorConstant.inputAreaFocusedBorder, width: 1.r),
+    ),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.r),
+      borderSide: BorderSide(color: ColorConstant.inputAreaBorder, width: 1.r),
+    ),
+    disabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.r),
+      borderSide: BorderSide.none,
+    ),
+    errorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.r),
+      borderSide: BorderSide(color: ColorConstant.inputAreaErrorBorder, width: 1.r),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.r),
+      borderSide: BorderSide(color: ColorConstant.inputAreaErrorBorder, width: 1.r),
+    ),
+    constraints: BoxConstraints(maxWidth: 306.w),
+  );
+
   static final textTheme = TextTheme(
     titleMedium: TextStyleConstant.titleMedium,
     displayLarge: TextStyleConstant.displayLarge,
     displayMedium: TextStyleConstant.displayMedium,
     displaySmall: TextStyleConstant.displaySmall,
     bodyMedium: TextStyleConstant.bodyMedium,
+    bodySmall: TextStyleConstant.bodySmall,
   );
 }
