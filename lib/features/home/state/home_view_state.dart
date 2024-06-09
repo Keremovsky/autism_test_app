@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 abstract class HomeViewState<T extends StatefulWidget> extends State<T> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  bool jaundiceBool = false;
 
   void onSavedField(String? value) {
     log(value ?? "empty");
@@ -18,12 +19,20 @@ abstract class HomeViewState<T extends StatefulWidget> extends State<T> {
     return control.toNullable()?.message;
   }
 
+  void onSavedGenderField(value) {
+    log(value ?? "empty");
+  }
+
   String? validateGenderField(String? value) {
     final control = InputFieldValidator.validateNullability(value);
     return control.toNullable()?.message;
   }
 
   void validateFormTap() {
+    if (!jaundiceBool) {
+      return;
+    }
+
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
     }
@@ -35,5 +44,11 @@ abstract class HomeViewState<T extends StatefulWidget> extends State<T> {
     } else {
       context.setLocale(LocaleConstants.en);
     }
+  }
+
+  void onCheckBoxTapped(bool value) {
+    setState(() {
+      jaundiceBool = value;
+    });
   }
 }

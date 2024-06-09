@@ -1,4 +1,5 @@
 import 'package:autism_test_app/core/constants/colors.dart';
+import 'package:autism_test_app/core/constants/size_constants.dart';
 import 'package:autism_test_app/core/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +29,10 @@ class ThemeConstant {
     floatingLabelBehavior: FloatingLabelBehavior.auto,
     errorStyle: TextStyleConstant.bodySmall,
     errorMaxLines: 1,
-    contentPadding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 4.h),
+    contentPadding: EdgeInsets.symmetric(
+      horizontal: SizeConstant.inputFieldHorizontalPadding,
+      vertical: SizeConstant.inputFieldVerticalPadding,
+    ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(15.r),
       borderSide: BorderSide(color: ColorConstant.inputAreaBorder, width: 1.r),

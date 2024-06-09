@@ -1,4 +1,5 @@
 import 'package:autism_test_app/core/constants/colors.dart';
+import 'package:autism_test_app/core/constants/size_constants.dart';
 import 'package:autism_test_app/core/extensions/context_extensions.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
@@ -58,8 +59,8 @@ class CustomDropdownButtonFormField<T> extends HookWidget {
                       value: e.value,
                       child: Padding(
                         padding: EdgeInsets.symmetric(
-                          vertical: 6.h,
-                          horizontal: 12.w,
+                          horizontal: SizeConstant.inputFieldHorizontalPadding,
+                          vertical: SizeConstant.inputFieldVerticalPadding,
                         ),
                         child: e.child,
                       ),

@@ -1,5 +1,6 @@
 import 'package:autism_test_app/core/constants/constants.dart';
 import 'package:autism_test_app/core/constants/locale_constants.dart';
+import 'package:autism_test_app/core/constants/size_constants.dart';
 import 'package:autism_test_app/router/router.dart';
 import 'package:autism_test_app/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       path: LocaleConstants.path,
       fallbackLocale: LocaleConstants.tr,
       child: ScreenUtilInit(
-        designSize: Constants.designSize,
+        designSize: SizeConstant.designSize,
         builder: (context, child) {
           return GestureDetector(
             onTap: () => unFocus(context),

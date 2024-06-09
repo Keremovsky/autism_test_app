@@ -1,8 +1,8 @@
-import 'dart:developer';
-
+import 'package:autism_test_app/core/components/check_box_tile.dart';
 import 'package:autism_test_app/core/components/custom_dropdown_button.dart';
 import 'package:autism_test_app/core/components/custom_text_field.dart';
 import 'package:autism_test_app/core/constants/dropdown_menu_items.dart';
+import 'package:autism_test_app/core/constants/size_constants.dart';
 import 'package:autism_test_app/core/extensions/context_extensions.dart';
 import 'package:autism_test_app/core/utils/input_formatters.dart';
 import 'package:autism_test_app/features/home/state/home_view_state.dart';
@@ -25,7 +25,7 @@ class _HomeViewState extends HomeViewState {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(27.0),
+        padding: EdgeInsets.all(SizeConstant.screenPadding),
         child: Form(
           key: formKey,
           child: Column(
@@ -51,9 +51,7 @@ class _HomeViewState extends HomeViewState {
               ),
               SizedBox(height: 10.h),
               CustomDropdownButtonFormField<String>(
-                onSaved: (value) {
-                  log(value ?? "empty");
-                },
+                onSaved: onSavedGenderField,
                 validator: validateGenderField,
                 hintText: "Gender",
                 items: DropdownMenuItemConstants.gender,
@@ -62,6 +60,14 @@ class _HomeViewState extends HomeViewState {
               TextButton(
                 onPressed: validateFormTap,
                 child: const Text("Control"),
+              ),
+              SizedBox(height: 15.h),
+              CheckBoxTile(
+                value: jaundiceBool,
+                onChanged: onCheckBoxTapped,
+                size: 24.r,
+                label:
+                    "Verileriniz daha sonrasında tarafınız tarafından ulaşılmak için kaydedilecektir.",
               ),
             ],
           ),
