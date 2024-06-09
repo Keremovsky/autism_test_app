@@ -29,6 +29,8 @@ class CustomTextField extends HookWidget {
   final bool enabled;
   final bool readOnly;
   final Color? fillColor;
+  final double? height;
+  final double? width;
   final InputBorder? border;
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
@@ -64,6 +66,8 @@ class CustomTextField extends HookWidget {
     this.enabled = true,
     this.readOnly = false,
     this.fillColor,
+    this.height,
+    this.width,
     this.border,
     this.enabledBorder,
     this.focusedBorder,
@@ -79,41 +83,45 @@ class CustomTextField extends HookWidget {
     final focusNode = this.focusNode ?? useFocusNode();
     useListenable(focusNode);
 
-    return TextFormField(
-      key: formFieldKey,
-      initialValue: initialValue,
-      style: style ?? context.displayLarge,
-      inputFormatters: inputFormatters,
-      autovalidateMode: autovalidateMode,
-      controller: controller,
-      focusNode: focusNode,
-      onChanged: onChanged,
-      onSaved: onSaved,
-      onFieldSubmitted: onFieldSubmitted,
-      obscureText: obscureText,
-      textInputAction: textInputAction ?? TextInputAction.next,
-      validator: validator,
-      keyboardType: textInputType,
-      maxLines: maxLines,
-      minLines: minLines,
-      enabled: enabled,
-      readOnly: readOnly,
-      textAlign: textAlign,
-      decoration: InputDecoration(
+    return SizedBox(
+      height: height,
+      width: width,
+      child: TextFormField(
+        key: formFieldKey,
+        initialValue: initialValue,
+        style: style ?? context.displayLarge,
+        inputFormatters: inputFormatters,
+        autovalidateMode: autovalidateMode,
+        controller: controller,
+        focusNode: focusNode,
+        onChanged: onChanged,
+        onSaved: onSaved,
+        onFieldSubmitted: onFieldSubmitted,
+        obscureText: obscureText,
+        textInputAction: textInputAction ?? TextInputAction.next,
+        validator: validator,
+        keyboardType: textInputType,
+        maxLines: maxLines,
+        minLines: minLines,
         enabled: enabled,
-        contentPadding: contentPadding,
-        fillColor: fillColor,
-        hintText: hintText,
-        hintStyle: hintStyle,
-        labelText: labelText,
-        labelStyle: focusNode.hasFocus ? labelStyle : labelStyle,
-        helperText: helperText,
-        border: border,
-        enabledBorder: enabledBorder,
-        focusedBorder: focusedBorder,
-        errorBorder: errorBorder,
-        focusedErrorBorder: focusedErrorBorder,
-        disabledBorder: disabledBorder,
+        readOnly: readOnly,
+        textAlign: textAlign,
+        decoration: InputDecoration(
+          enabled: enabled,
+          contentPadding: contentPadding,
+          fillColor: fillColor,
+          hintText: hintText,
+          hintStyle: hintStyle,
+          labelText: labelText,
+          labelStyle: focusNode.hasFocus ? labelStyle : labelStyle,
+          helperText: helperText,
+          border: border,
+          enabledBorder: enabledBorder,
+          focusedBorder: focusedBorder,
+          errorBorder: errorBorder,
+          focusedErrorBorder: focusedErrorBorder,
+          disabledBorder: disabledBorder,
+        ),
       ),
     );
   }

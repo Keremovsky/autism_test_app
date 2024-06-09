@@ -1,4 +1,7 @@
 {
-    "language": "English",
-    "changeLanguage": "Change Language"
+    "appName": "Autism Test",
+    "testCodeHintText": "Enter the test code",
+    "english": "English",
+    "turkish": "Turkish",
+    "newTestButton": "New Test"
 }

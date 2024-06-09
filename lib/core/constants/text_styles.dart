@@ -13,14 +13,14 @@ class TextStyleConstant {
   /// input area text, question text and result page texts
   static final displayLarge = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: FontSizeConstant.fontSize20,
+    fontSize: FontSizeConstant.fontSize18,
     color: ColorConstant.blackText,
   );
 
   /// text button's text
   static final displayMedium = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: FontSizeConstant.fontSize20,
+    fontSize: FontSizeConstant.fontSize18,
     color: ColorConstant.whiteText,
   );
 
@@ -34,7 +34,7 @@ class TextStyleConstant {
   /// input area hint text
   static final bodyMedium = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: FontSizeConstant.fontSize20,
+    fontSize: FontSizeConstant.fontSize16,
     color: ColorConstant.greyText,
   );
 

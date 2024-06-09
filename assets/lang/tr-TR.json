@@ -1,4 +1,7 @@
 {
-    "language": "Türkçe",
-    "changeLanguage": "Dili Değiştir"
+    "appName": "Otizm Test",
+    "testCodeHintText": "Test kodunu giriniz",
+    "english": "İngilizce",
+    "turkish": "Türkçe",
+    "newTestButton": "Yeni Test"
 }

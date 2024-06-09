@@ -5,9 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ThemeConstant {
-  static final textButtonThemeData = TextButtonThemeData(
+  static final filledButtonThemeData = FilledButtonThemeData(
     style: ButtonStyle(
-      minimumSize: WidgetStatePropertyAll(Size.fromHeight(40.h)),
       backgroundColor: WidgetStateProperty.resolveWith<Color>(
         (states) => ColorConstant.main,
       ),

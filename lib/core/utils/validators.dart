@@ -18,4 +18,14 @@ class InputFieldValidator {
 
     return none();
   }
+
+  static Option<ValueFailureModel> validateTestCode(String? input) {
+    if (input == null || input.isEmpty) {
+      return some(ValueFailureModel.invalidInput("Null input is not allowed!"));
+    }
+
+    // TODO: Implement test code validation logic here
+
+    return none();
+  }
 }

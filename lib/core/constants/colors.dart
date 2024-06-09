@@ -7,7 +7,7 @@ class ColorConstant {
   static const red = Color.fromRGBO(229, 0, 2, 1);
 
   static const whiteText = Color.fromRGBO(254, 254, 254, 1);
-  static const greyText = Color.fromRGBO(113, 113, 113, 1);
+  static const greyText = Color.fromRGBO(66, 66, 66, 1);
   static const blackText = Color.fromRGBO(0, 0, 0, 1);
 
   static const checkboxDisabled = Color.fromRGBO(250, 250, 250, 1);

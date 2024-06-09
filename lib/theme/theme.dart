@@ -7,6 +7,6 @@ final theme = ThemeData(
   primaryColor: ColorConstant.main,
   scaffoldBackgroundColor: ColorConstant.scaffoldBackground,
   textTheme: ThemeConstant.textTheme,
-  textButtonTheme: ThemeConstant.textButtonThemeData,
+  filledButtonTheme: ThemeConstant.filledButtonThemeData,
   inputDecorationTheme: ThemeConstant.inputDecorationTheme,
 );
