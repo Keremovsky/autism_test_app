@@ -5,6 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ThemeConstant {
+  static final appBarTheme = AppBarTheme(
+    iconTheme: iconThemeData,
+    actionsIconTheme: iconThemeData,
+    titleTextStyle: TextStyleConstant.titleMedium,
+    foregroundColor: ColorConstant.scaffoldBackground,
+    scrolledUnderElevation: 0,
+    elevation: 0,
+    centerTitle: true,
+    backgroundColor: ColorConstant.main,
+  );
+
   static final filledButtonThemeData = FilledButtonThemeData(
     style: ButtonStyle(
       backgroundColor: WidgetStateProperty.resolveWith<Color>(
@@ -57,6 +68,11 @@ class ThemeConstant {
       borderSide: BorderSide(color: ColorConstant.inputAreaErrorBorder, width: 1.r),
     ),
     constraints: BoxConstraints(maxWidth: 306.w),
+  );
+
+  static final iconThemeData = IconThemeData(
+    color: ColorConstant.scaffoldBackground,
+    size: 30.r,
   );
 
   static final textTheme = TextTheme(

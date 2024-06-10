@@ -6,7 +6,9 @@ final theme = ThemeData(
   colorScheme: ColorScheme.fromSeed(seedColor: ColorConstant.main),
   primaryColor: ColorConstant.main,
   scaffoldBackgroundColor: ColorConstant.scaffoldBackground,
+  appBarTheme: ThemeConstant.appBarTheme,
   textTheme: ThemeConstant.textTheme,
   filledButtonTheme: ThemeConstant.filledButtonThemeData,
   inputDecorationTheme: ThemeConstant.inputDecorationTheme,
+  iconTheme: ThemeConstant.iconThemeData,
 );

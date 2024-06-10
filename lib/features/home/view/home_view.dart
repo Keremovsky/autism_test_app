@@ -1,6 +1,5 @@
 import 'package:autism_test_app/core/components/custom_button.dart';
 import 'package:autism_test_app/core/components/custom_text_field.dart';
-import 'package:autism_test_app/core/constants/colors.dart';
 import 'package:autism_test_app/core/constants/size_constants.dart';
 import 'package:autism_test_app/features/home/state/home_view_state.dart';
 import 'package:autism_test_app/gen/locale_keys.g.dart';
@@ -22,11 +21,7 @@ class _HomeViewState extends HomeViewState {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        backgroundColor: ColorConstant.main,
-        title: Text(LocaleKeys.appName.tr()),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: Text(LocaleKeys.appName.tr())),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(SizeConstant.screenPadding),
