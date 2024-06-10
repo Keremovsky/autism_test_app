@@ -5,6 +5,7 @@ import 'package:autism_test_app/core/components/custom_text_field.dart';
 import 'package:autism_test_app/core/constants/colors.dart';
 import 'package:autism_test_app/core/constants/dropdown_menu_items.dart';
 import 'package:autism_test_app/core/constants/size_constants.dart';
+import 'package:autism_test_app/core/utils/input_formatters.dart';
 import 'package:autism_test_app/features/test/state/create_test_view_state.dart';
 import 'package:autism_test_app/gen/locale_keys.g.dart';
 import 'package:auto_route/annotations.dart';
@@ -43,6 +44,7 @@ class _CreateTestViewState extends CreateTestViewState {
                       width: 148.w,
                       onSaved: onSavedAge,
                       validator: validateAge,
+                      inputFormatters: InputFieldFormatters.ageFormatter,
                       hintText: LocaleKeys.ageHintText.tr(),
                     ),
                     const Spacer(),
