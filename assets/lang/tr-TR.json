@@ -73,6 +73,14 @@
     "backButton": "Önceki Soru",
     "finishTestButton": "Testi Bitir",
 
+    "testCode": "Test Kodu",
+    "codeExplanation": "Test sonucunuzu daha sonrasında görebilmek için test koduna ihtiyacınız vardır. Kodu kaydettiğinizden emin olun.",
+    "ok": "Tamam",
+    "answer": "Cevap",
+    "needHelp": "Testi çözdüğünüz çocuk için bir sağlık uzmanıyla görüşmeyi düşünebilirsiniz.",
+    "noNeedHelp": "Test yaptığınız çocuk için bir sağlık uzmanına görünmeniz gerekmeyebilir.",
+    "score": "Skor",
+
     "emptyFieldMessage": "Alan boş bırakılamaz.",
     "notValidAgeMessage": "Yaş bir sayı olmalı.",
     "ageCannotBeOverMessage": "37'den küçük olmalı.",

@@ -47,6 +47,6 @@ abstract class QuestionViewState extends State<QuestionView> {
     }
 
     context.read<TestController>().setQuestion(widget.pageNumber, selectedAnswerIndex);
-    // TODO: navigate to result page
+    context.pushRoute(const DisplayTestResultViewRoute());
   }
 }

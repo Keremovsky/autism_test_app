@@ -73,6 +73,14 @@
     "backButton": "Previous Question",
     "finishTestButton": "Finish Test",
 
+    "testCode": "Test Code",
+    "codeExplanation": "In order to display results after the test, you need to enter the test code next time. So make sure to save it.",
+    "ok": "Okay",
+    "answer": "Answer",
+    "needHelp": "You may consider seeing a healthcare professional for the child you are testing for.",
+    "noNeedHelp": "You may not need to see a healthcare professional for the child you are testing for.",
+    "score": "Score",
+
     "emptyFieldMessage": "Field can't be empty.",
     "notValidAgeMessage": "Age must be a number.",
     "ageCannotBeOverMessage": "Must be less than 37.",

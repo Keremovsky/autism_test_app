@@ -63,6 +63,13 @@ abstract class  LocaleKeys {
   static const nextButton = 'nextButton';
   static const backButton = 'backButton';
   static const finishTestButton = 'finishTestButton';
+  static const testCode = 'testCode';
+  static const codeExplanation = 'codeExplanation';
+  static const ok = 'ok';
+  static const answer = 'answer';
+  static const needHelp = 'needHelp';
+  static const noNeedHelp = 'noNeedHelp';
+  static const score = 'score';
   static const emptyFieldMessage = 'emptyFieldMessage';
   static const notValidAgeMessage = 'notValidAgeMessage';
   static const ageCannotBeOverMessage = 'ageCannotBeOverMessage';

@@ -48,7 +48,7 @@ class _QuestionViewState extends QuestionViewState {
                     return CheckBoxTile.short(
                       onChanged: (value) => selectAnswer(index),
                       label: QuestionAnswerConstant.questionAnswers[widget.pageNumber][index],
-                      labelStyle: TextStyleConstant.displayLarge,
+                      labelStyle: context.displayLarge,
                       backgroundColor: ColorConstant.whiteText,
                       borderDecoration: Border.all(
                         color: ColorConstant.inputAreaSelectedBackground,

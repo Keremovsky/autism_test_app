@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const CreateTestView(),
       );
     },
+    DisplayTestResultViewRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DisplayTestResultView(),
+      );
+    },
     HomeViewRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -50,6 +56,20 @@ class CreateTestViewRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'CreateTestViewRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [DisplayTestResultView]
+class DisplayTestResultViewRoute extends PageRouteInfo<void> {
+  const DisplayTestResultViewRoute({List<PageRouteInfo>? children})
+      : super(
+          DisplayTestResultViewRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DisplayTestResultViewRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -86,8 +106,7 @@ class QuestionViewRoute extends PageRouteInfo<QuestionViewRouteArgs> {
 
   static const String name = 'QuestionViewRoute';
 
-  static const PageInfo<QuestionViewRouteArgs> page =
-      PageInfo<QuestionViewRouteArgs>(name);
+  static const PageInfo<QuestionViewRouteArgs> page = PageInfo<QuestionViewRouteArgs>(name);
 }
 
 class QuestionViewRouteArgs {
