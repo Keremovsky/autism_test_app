@@ -76,7 +76,7 @@ class _CreateTestViewState extends CreateTestViewState {
                 ),
                 const _Gap13(),
                 CustomDropdownButtonFormField(
-                  onSaved: onSavedPersonSolveTest,
+                  onSaved: onSavedPersonSolvedTest,
                   validator: validateDropdownMenu,
                   hintText: LocaleKeys.personSolveTheTestHintText.tr(),
                   items: DropdownMenuItemConstants.personSolvedTest,

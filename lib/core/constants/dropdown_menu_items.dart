@@ -48,10 +48,6 @@ class DropdownMenuItemConstants {
           child: Text(LocaleKeys.latino.tr()),
         ),
         DropdownMenuItem(
-          value: "middle eastern",
-          child: Text(LocaleKeys.middleEastern.tr()),
-        ),
-        DropdownMenuItem(
           value: "pacifica",
           child: Text(LocaleKeys.pacifica.tr()),
         ),

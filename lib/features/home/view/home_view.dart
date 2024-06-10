@@ -39,12 +39,12 @@ class _HomeViewState extends HomeViewState {
                 Row(
                   children: [
                     CustomTextField(
-                      width: 251.w,
+                      width: 260.w,
                       onSaved: onSavedTestCode,
                       validator: validateTestCode,
                       hintText: LocaleKeys.testCodeHintText.tr(),
                     ),
-                    SizedBox(width: 5.w),
+                    const Spacer(),
                     CustomButton(
                       onPressed: onSearchButtonPressed,
                       height: 50.h,

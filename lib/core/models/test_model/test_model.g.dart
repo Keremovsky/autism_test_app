@@ -8,15 +8,16 @@ part of 'test_model.dart';
 
 _$TestModelImpl _$$TestModelImplFromJson(Map<String, dynamic> json) =>
     _$TestModelImpl(
-      answers: (json['answers'] as List<dynamic>)
-          .map((e) => (e as num).toInt())
-          .toList(),
-      age: (json['age'] as num).toInt(),
-      gender: json['gender'] as String,
-      ethnicity: json['ethnicity'] as String,
-      isJaundice: json['isJaundice'] as bool,
-      isAutisticFamilyMember: json['isAutisticFamilyMember'] as bool,
-      personSolvedTest: json['personSolvedTest'] as String,
+      answers: (json['answers'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
+      age: (json['age'] as num?)?.toInt(),
+      gender: json['gender'] as String?,
+      ethnicity: json['ethnicity'] as String?,
+      isJaundice: json['isJaundice'] as bool? ?? false,
+      isAutisticFamilyMember: json['isAutisticFamilyMember'] as bool? ?? false,
+      personSolvedTest: json['personSolvedTest'] as String?,
     );
 
 Map<String, dynamic> _$$TestModelImplToJson(_$TestModelImpl instance) =>

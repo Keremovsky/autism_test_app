@@ -21,12 +21,19 @@ TestModel _$TestModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TestModel {
   List<int> get answers => throw _privateConstructorUsedError;
-  int get age => throw _privateConstructorUsedError;
-  String get gender => throw _privateConstructorUsedError;
-  String get ethnicity => throw _privateConstructorUsedError;
+  set answers(List<int> value) => throw _privateConstructorUsedError;
+  int? get age => throw _privateConstructorUsedError;
+  set age(int? value) => throw _privateConstructorUsedError;
+  String? get gender => throw _privateConstructorUsedError;
+  set gender(String? value) => throw _privateConstructorUsedError;
+  String? get ethnicity => throw _privateConstructorUsedError;
+  set ethnicity(String? value) => throw _privateConstructorUsedError;
   bool get isJaundice => throw _privateConstructorUsedError;
+  set isJaundice(bool value) => throw _privateConstructorUsedError;
   bool get isAutisticFamilyMember => throw _privateConstructorUsedError;
-  String get personSolvedTest => throw _privateConstructorUsedError;
+  set isAutisticFamilyMember(bool value) => throw _privateConstructorUsedError;
+  String? get personSolvedTest => throw _privateConstructorUsedError;
+  set personSolvedTest(String? value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,12 +48,12 @@ abstract class $TestModelCopyWith<$Res> {
   @useResult
   $Res call(
       {List<int> answers,
-      int age,
-      String gender,
-      String ethnicity,
+      int? age,
+      String? gender,
+      String? ethnicity,
       bool isJaundice,
       bool isAutisticFamilyMember,
-      String personSolvedTest});
+      String? personSolvedTest});
 }
 
 /// @nodoc
@@ -63,30 +70,30 @@ class _$TestModelCopyWithImpl<$Res, $Val extends TestModel>
   @override
   $Res call({
     Object? answers = null,
-    Object? age = null,
-    Object? gender = null,
-    Object? ethnicity = null,
+    Object? age = freezed,
+    Object? gender = freezed,
+    Object? ethnicity = freezed,
     Object? isJaundice = null,
     Object? isAutisticFamilyMember = null,
-    Object? personSolvedTest = null,
+    Object? personSolvedTest = freezed,
   }) {
     return _then(_value.copyWith(
       answers: null == answers
           ? _value.answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      age: null == age
+      age: freezed == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as int,
-      gender: null == gender
+              as int?,
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as String,
-      ethnicity: null == ethnicity
+              as String?,
+      ethnicity: freezed == ethnicity
           ? _value.ethnicity
           : ethnicity // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       isJaundice: null == isJaundice
           ? _value.isJaundice
           : isJaundice // ignore: cast_nullable_to_non_nullable
@@ -95,10 +102,10 @@ class _$TestModelCopyWithImpl<$Res, $Val extends TestModel>
           ? _value.isAutisticFamilyMember
           : isAutisticFamilyMember // ignore: cast_nullable_to_non_nullable
               as bool,
-      personSolvedTest: null == personSolvedTest
+      personSolvedTest: freezed == personSolvedTest
           ? _value.personSolvedTest
           : personSolvedTest // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -113,12 +120,12 @@ abstract class _$$TestModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<int> answers,
-      int age,
-      String gender,
-      String ethnicity,
+      int? age,
+      String? gender,
+      String? ethnicity,
       bool isJaundice,
       bool isAutisticFamilyMember,
-      String personSolvedTest});
+      String? personSolvedTest});
 }
 
 /// @nodoc
@@ -133,30 +140,30 @@ class __$$TestModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? answers = null,
-    Object? age = null,
-    Object? gender = null,
-    Object? ethnicity = null,
+    Object? age = freezed,
+    Object? gender = freezed,
+    Object? ethnicity = freezed,
     Object? isJaundice = null,
     Object? isAutisticFamilyMember = null,
-    Object? personSolvedTest = null,
+    Object? personSolvedTest = freezed,
   }) {
     return _then(_$TestModelImpl(
       answers: null == answers
-          ? _value._answers
+          ? _value.answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      age: null == age
+      age: freezed == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as int,
-      gender: null == gender
+              as int?,
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as String,
-      ethnicity: null == ethnicity
+              as String?,
+      ethnicity: freezed == ethnicity
           ? _value.ethnicity
           : ethnicity // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       isJaundice: null == isJaundice
           ? _value.isJaundice
           : isJaundice // ignore: cast_nullable_to_non_nullable
@@ -165,10 +172,10 @@ class __$$TestModelImplCopyWithImpl<$Res>
           ? _value.isAutisticFamilyMember
           : isAutisticFamilyMember // ignore: cast_nullable_to_non_nullable
               as bool,
-      personSolvedTest: null == personSolvedTest
+      personSolvedTest: freezed == personSolvedTest
           ? _value.personSolvedTest
           : personSolvedTest // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -176,74 +183,40 @@ class __$$TestModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$TestModelImpl implements _TestModel {
-  const _$TestModelImpl(
-      {required final List<int> answers,
-      required this.age,
-      required this.gender,
-      required this.ethnicity,
-      required this.isJaundice,
-      required this.isAutisticFamilyMember,
-      required this.personSolvedTest})
-      : _answers = answers;
+  _$TestModelImpl(
+      {this.answers = const [],
+      this.age,
+      this.gender,
+      this.ethnicity,
+      this.isJaundice = false,
+      this.isAutisticFamilyMember = false,
+      this.personSolvedTest});
 
   factory _$TestModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$TestModelImplFromJson(json);
 
-  final List<int> _answers;
   @override
-  List<int> get answers {
-    if (_answers is EqualUnmodifiableListView) return _answers;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_answers);
-  }
-
+  @JsonKey()
+  List<int> answers;
   @override
-  final int age;
+  int? age;
   @override
-  final String gender;
+  String? gender;
   @override
-  final String ethnicity;
+  String? ethnicity;
   @override
-  final bool isJaundice;
+  @JsonKey()
+  bool isJaundice;
   @override
-  final bool isAutisticFamilyMember;
+  @JsonKey()
+  bool isAutisticFamilyMember;
   @override
-  final String personSolvedTest;
+  String? personSolvedTest;
 
   @override
   String toString() {
     return 'TestModel(answers: $answers, age: $age, gender: $gender, ethnicity: $ethnicity, isJaundice: $isJaundice, isAutisticFamilyMember: $isAutisticFamilyMember, personSolvedTest: $personSolvedTest)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TestModelImpl &&
-            const DeepCollectionEquality().equals(other._answers, _answers) &&
-            (identical(other.age, age) || other.age == age) &&
-            (identical(other.gender, gender) || other.gender == gender) &&
-            (identical(other.ethnicity, ethnicity) ||
-                other.ethnicity == ethnicity) &&
-            (identical(other.isJaundice, isJaundice) ||
-                other.isJaundice == isJaundice) &&
-            (identical(other.isAutisticFamilyMember, isAutisticFamilyMember) ||
-                other.isAutisticFamilyMember == isAutisticFamilyMember) &&
-            (identical(other.personSolvedTest, personSolvedTest) ||
-                other.personSolvedTest == personSolvedTest));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_answers),
-      age,
-      gender,
-      ethnicity,
-      isJaundice,
-      isAutisticFamilyMember,
-      personSolvedTest);
 
   @JsonKey(ignore: true)
   @override
@@ -260,32 +233,39 @@ class _$TestModelImpl implements _TestModel {
 }
 
 abstract class _TestModel implements TestModel {
-  const factory _TestModel(
-      {required final List<int> answers,
-      required final int age,
-      required final String gender,
-      required final String ethnicity,
-      required final bool isJaundice,
-      required final bool isAutisticFamilyMember,
-      required final String personSolvedTest}) = _$TestModelImpl;
+  factory _TestModel(
+      {List<int> answers,
+      int? age,
+      String? gender,
+      String? ethnicity,
+      bool isJaundice,
+      bool isAutisticFamilyMember,
+      String? personSolvedTest}) = _$TestModelImpl;
 
   factory _TestModel.fromJson(Map<String, dynamic> json) =
       _$TestModelImpl.fromJson;
 
   @override
   List<int> get answers;
+  set answers(List<int> value);
   @override
-  int get age;
+  int? get age;
+  set age(int? value);
   @override
-  String get gender;
+  String? get gender;
+  set gender(String? value);
   @override
-  String get ethnicity;
+  String? get ethnicity;
+  set ethnicity(String? value);
   @override
   bool get isJaundice;
+  set isJaundice(bool value);
   @override
   bool get isAutisticFamilyMember;
+  set isAutisticFamilyMember(bool value);
   @override
-  String get personSolvedTest;
+  String? get personSolvedTest;
+  set personSolvedTest(String? value);
   @override
   @JsonKey(ignore: true)
   _$$TestModelImplCopyWith<_$TestModelImpl> get copyWith =>
