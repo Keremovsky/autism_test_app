@@ -1,4 +1,4 @@
-import 'package:autism_test_app/core/components/custom_text_button.dart';
+import 'package:autism_test_app/core/components/custom_button.dart';
 import 'package:autism_test_app/core/components/custom_text_field.dart';
 import 'package:autism_test_app/core/constants/colors.dart';
 import 'package:autism_test_app/core/constants/size_constants.dart';
@@ -56,9 +56,9 @@ class _HomeViewState extends HomeViewState {
                     ),
                   ],
                 ),
-                SizedBox(height: 25.h),
+                SizedBox(height: 30.h),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: onNewTestButtonPressed,
                   width: double.infinity,
                   child: Text(LocaleKeys.newTestButton.tr()),
                 ),

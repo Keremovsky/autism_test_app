@@ -5,5 +5,35 @@
     "turkish": "Türkçe",
     "newTestButton": "Yeni Test",
 
-    "emptyFieldMessage": "Alan boş bırakılamaz."
+    "ageHintText": "Yaş (Ay)",
+    "genderHintText": "Cinsiyet",
+    "jaundiceHintText": "Sarılık",
+    "autisticFamilyMemberHintText": "OSB'li Aile Bireyi",
+    "ethnicityHintText": "Etnik Köken",
+    "personSolveTheTestHintText": "Testi Çözen Kişi",
+    "dataUsageVerificationText": "Verileriniz daha sonrasında tarafınız tarafından ulaşılmak için kaydedilecektir.",
+    "startTestButton": "Teste Başla",
+
+    "boy": "Erkek",
+    "girl": "Kız",
+
+    "middleEastern": "Orta Doğulu",
+    "whiteEuropean": "Beyaz Avrupalı",
+    "hispanic": "Hispanik",
+    "black": "Zenci",
+    "asian": "Asyalı",
+    "southAsian": "Güney Asyalı",
+    "nativeIndian": "Yerli Hintli",
+    "latino": "Latin",
+    "pacifica": "Pasifik",
+    "mixed": "Karışık",
+    "others": "Diğer",
+
+    "familyMember": "Aile Üyesi",
+    "healthCareProfessional": "Sağlık Çalışanı",
+    "self": "Kendi",
+
+    "emptyFieldMessage": "Alan boş bırakılamaz.",
+    "notValidAgeMessage": "Yaş bir sayı olmalı.",
+    "ageCannotBeOverMessage": "37'den küçük olmalı."
 }

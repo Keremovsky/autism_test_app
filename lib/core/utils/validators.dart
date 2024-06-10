@@ -30,4 +30,23 @@ class InputFieldValidator {
 
     return none();
   }
+
+  static Option<ValueFailureModel> validateAge(String? input) {
+    if (input == null || input.isEmpty) {
+      return some(ValueFailureModel.invalidInput(LocaleKeys.emptyFieldMessage.tr()));
+    }
+
+    final age = input.toIntOption;
+
+    return age.fold(
+      () => some(ValueFailureModel.invalidInput(LocaleKeys.notValidAgeMessage.tr())),
+      (value) {
+        if (value > 36) {
+          return some(ValueFailureModel.invalidInput(LocaleKeys.ageCannotBeOverMessage.tr()));
+        }
+
+        return none();
+      },
+    );
+  }
 }

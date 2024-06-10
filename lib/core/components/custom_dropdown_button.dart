@@ -21,6 +21,8 @@ class CustomDropdownButtonFormField<T> extends HookWidget {
   final bool isDeselectActive;
   final AutovalidateMode? autovalidateMode;
   final FocusNode? focusNode;
+  final double? height;
+  final double? width;
 
   const CustomDropdownButtonFormField({
     super.key,
@@ -38,6 +40,8 @@ class CustomDropdownButtonFormField<T> extends HookWidget {
     this.isDeselectActive = true,
     this.autovalidateMode,
     this.focusNode,
+    this.height,
+    this.width,
   });
 
   @override
@@ -47,7 +51,9 @@ class CustomDropdownButtonFormField<T> extends HookWidget {
 
     return Row(
       children: [
-        Expanded(
+        SizedBox(
+          height: height,
+          width: width,
           child: IgnorePointer(
             ignoring: onSaved == null,
             child: DropdownButtonFormField2<T>(

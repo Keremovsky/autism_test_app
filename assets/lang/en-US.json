@@ -5,5 +5,35 @@
     "turkish": "Turkish",
     "newTestButton": "New Test",
 
-    "emptyFieldMessage": "Field can't be empty."
+    "ageHintText": "Age (Month)",
+    "genderHintText": "Gender",
+    "jaundiceHintText": "Jaundice",
+    "autisticFamilyMemberHintText": "Family Member With ASD",
+    "ethnicityHintText": "Ethnicity",
+    "personSolveTheTestHintText": "Person Who Solve The Test",
+    "dataUsageVerificationText": "Your data will be saved so that you can access it later.",
+    "startTestButton": "Start Test",
+
+    "boy": "Male",
+    "girl": "Female",
+
+    "middleEastern": "Middle Eastern",
+    "whiteEuropean": "White European",
+    "hispanic": "Hispanic",
+    "black": "Black",
+    "asian": "Asian",
+    "southAsian": "South Asian",
+    "nativeIndian": "Native Indian",
+    "latino": "Latino",
+    "pacifica": "Pacifica",
+    "mixed": "Mixed",
+    "others": "Others",
+
+    "familyMember": "Family Member",
+    "healthCareProfessional": "Health Care Professional",
+    "self": "Self",
+
+    "emptyFieldMessage": "Field can't be empty.",
+    "notValidAgeMessage": "Age must be a number.",
+    "ageCannotBeOverMessage": "Must be less than 37."
 }
