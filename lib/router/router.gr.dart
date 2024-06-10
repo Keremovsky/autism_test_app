@@ -27,6 +27,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HomeView(),
       );
     },
+    QuestionViewRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const QuestionView(),
+      );
+    },
   };
 }
 
@@ -54,6 +60,20 @@ class HomeViewRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeViewRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [QuestionView]
+class QuestionViewRoute extends PageRouteInfo<void> {
+  const QuestionViewRoute({List<PageRouteInfo>? children})
+      : super(
+          QuestionViewRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'QuestionViewRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -4,6 +4,8 @@ import 'package:autism_test_app/core/services/feedback/toast_service.dart';
 import 'package:autism_test_app/core/utils/validators.dart';
 import 'package:autism_test_app/features/test/controller/test_controller.dart';
 import 'package:autism_test_app/gen/locale_keys.g.dart';
+import 'package:autism_test_app/router/router.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -73,7 +75,7 @@ abstract class CreateTestViewState<T extends StatefulWidget> extends State<T> {
 
       log("TestModel: ${Provider.of<TestController>(context, listen: false).testModel}");
 
-      // TODO: navigate to the first question page
+      context.pushRoute(const QuestionViewRoute());
     }
   }
 }

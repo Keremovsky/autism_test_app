@@ -53,13 +53,13 @@ class _CreateTestViewState extends CreateTestViewState {
                   ],
                 ),
                 const _Gap18(),
-                CheckBoxTile(
+                CheckBoxTile.long(
                   onChanged: onJaundiceChanged,
                   label: LocaleKeys.jaundiceHintText.tr(),
                   value: isJaundice,
                 ),
                 const _Gap13(),
-                CheckBoxTile(
+                CheckBoxTile.long(
                   onChanged: onAutisticFamilyMemberChanged,
                   label: LocaleKeys.autisticFamilyMemberHintText.tr(),
                   value: isAutisticFamilyMember,
@@ -81,7 +81,7 @@ class _CreateTestViewState extends CreateTestViewState {
                 const Spacer(),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5.w),
-                  child: CheckBoxTile(
+                  child: CheckBoxTile.long(
                     onChanged: onDataPermissionGivenChanged,
                     label: LocaleKeys.dataUsageVerificationText.tr(),
                     value: isDataPermissionGiven,
