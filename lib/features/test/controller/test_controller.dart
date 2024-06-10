@@ -16,7 +16,7 @@ class TestController extends ChangeNotifier {
 
   TestController._init() {
     _networkService = NetworkService();
-    _testModel = TestModel();
+    _testModel = TestModel(answers: List.filled(10, -1));
   }
 
   TestModel get testModel => _testModel;
@@ -60,6 +60,17 @@ class TestController extends ChangeNotifier {
   void setQuestion(int questionNumber, int value) {
     log("questionNumber: $questionNumber, value: $value");
     _testModel.answers[questionNumber] = value;
+    log("answers: ${_testModel.answers}");
+    notifyListeners();
+  }
+
+  int getQuestionAnswer(int questionNumber) {
+    return _testModel.answers[questionNumber];
+  }
+
+  void clearTest() {
+    log("Test cleared.");
+    _testModel = TestModel(answers: List.filled(10, -1));
     notifyListeners();
   }
 

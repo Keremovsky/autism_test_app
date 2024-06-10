@@ -6,7 +6,7 @@ class TextStyleConstant {
   /// app bar title
   static final titleMedium = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: FontSizeConstant.fontSize28,
+    fontSize: FontSizeConstant.fontSize24,
     color: ColorConstant.whiteText,
   );
 

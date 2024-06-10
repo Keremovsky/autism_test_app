@@ -90,7 +90,6 @@ final class _Long extends CheckBoxTile {
       onTap: () => onChanged(!value),
       child: Material(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(15.r),
         child: DecoratedBox(
           decoration: BoxDecoration(
             border: borderDecoration,

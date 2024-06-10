@@ -1,5 +1,7 @@
 import 'package:autism_test_app/core/constants/locale_constants.dart';
+import 'package:autism_test_app/core/extensions/context_extensions.dart';
 import 'package:autism_test_app/core/utils/validators.dart';
+import 'package:autism_test_app/features/test/controller/test_controller.dart';
 import 'package:autism_test_app/router/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -24,8 +26,11 @@ abstract class HomeViewState<T extends StatefulWidget> extends State<T> {
     }
   }
 
-  void onNewTestButtonPressed() {
-    context.pushRoute(const CreateTestViewRoute());
+  void onNewTestButtonPressed() async {
+    await context.pushRoute(const CreateTestViewRoute());
+    if (mounted) {
+      context.read<TestController>().clearTest();
+    }
   }
 
   void onEnglishButtonPressed() => context.setLocale(LocaleConstants.en);

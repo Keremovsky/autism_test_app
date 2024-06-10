@@ -72,7 +72,7 @@ class ThemeConstant {
 
   static final iconThemeData = IconThemeData(
     color: ColorConstant.scaffoldBackground,
-    size: 30.r,
+    size: 28.r,
   );
 
   static final textTheme = TextTheme(

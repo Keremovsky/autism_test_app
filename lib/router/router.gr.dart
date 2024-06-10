@@ -28,9 +28,13 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     QuestionViewRoute.name: (routeData) {
+      final args = routeData.argsAs<QuestionViewRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const QuestionView(),
+        child: QuestionView(
+          key: args.key,
+          pageNumber: args.pageNumber,
+        ),
       );
     },
   };
@@ -66,14 +70,38 @@ class HomeViewRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [QuestionView]
-class QuestionViewRoute extends PageRouteInfo<void> {
-  const QuestionViewRoute({List<PageRouteInfo>? children})
-      : super(
+class QuestionViewRoute extends PageRouteInfo<QuestionViewRouteArgs> {
+  QuestionViewRoute({
+    Key? key,
+    required int pageNumber,
+    List<PageRouteInfo>? children,
+  }) : super(
           QuestionViewRoute.name,
+          args: QuestionViewRouteArgs(
+            key: key,
+            pageNumber: pageNumber,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'QuestionViewRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<QuestionViewRouteArgs> page =
+      PageInfo<QuestionViewRouteArgs>(name);
+}
+
+class QuestionViewRouteArgs {
+  const QuestionViewRouteArgs({
+    this.key,
+    required this.pageNumber,
+  });
+
+  final Key? key;
+
+  final int pageNumber;
+
+  @override
+  String toString() {
+    return 'QuestionViewRouteArgs{key: $key, pageNumber: $pageNumber}';
+  }
 }

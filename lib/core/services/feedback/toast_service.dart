@@ -12,11 +12,11 @@ class ToastService implements IToastService {
   ToastService._init();
 
   @override
-  void showToast(String feedback) {
+  void showToast(String feedback, [ToastGravity? gravity]) {
     Fluttertoast.showToast(
       msg: feedback,
       toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM,
+      gravity: gravity ?? ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
       backgroundColor: ColorConstant.main,
       textColor: Colors.white,

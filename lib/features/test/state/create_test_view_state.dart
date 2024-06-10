@@ -17,22 +17,19 @@ abstract class CreateTestViewState<T extends StatefulWidget> extends State<T> {
   bool isAutisticFamilyMember = false;
   bool isDataPermissionGiven = false;
 
-  void onSavedAge(String? value) =>
-      Provider.of<TestController>(context, listen: false).setAge(int.parse(value!));
+  void onSavedAge(String? value) => context.read<TestController>().setAge(int.parse(value!));
 
   String? validateAge(String? input) {
     final control = InputFieldValidator.validateAge(input);
     return control.toNullable()?.message;
   }
 
-  void onSavedGender(String? value) =>
-      Provider.of<TestController>(context, listen: false).setGender(value!);
+  void onSavedGender(String? value) => context.read<TestController>().setGender(value!);
 
-  void onSavedEthnicity(String? value) =>
-      Provider.of<TestController>(context, listen: false).setEthnicity(value!);
+  void onSavedEthnicity(String? value) => context.read<TestController>().setEthnicity(value!);
 
   void onSavedPersonSolvedTest(String? value) =>
-      Provider.of<TestController>(context, listen: false).setPersonSolvedTest(value!);
+      context.read<TestController>().setPersonSolvedTest(value!);
 
   String? validateDropdownMenu(String? input) {
     final control = InputFieldValidator.validateNullability(input);
@@ -68,14 +65,12 @@ abstract class CreateTestViewState<T extends StatefulWidget> extends State<T> {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
 
-      Provider.of<TestController>(context, listen: false).setIsJaundice(isJaundice);
-      Provider.of<TestController>(context, listen: false).setIsAutisticFamilyMember(
-        isAutisticFamilyMember,
-      );
+      context.read<TestController>().setIsJaundice(isJaundice);
+      context.read<TestController>().setIsAutisticFamilyMember(isAutisticFamilyMember);
 
       log("TestModel: ${Provider.of<TestController>(context, listen: false).testModel}");
 
-      context.pushRoute(const QuestionViewRoute());
+      context.pushRoute(QuestionViewRoute(pageNumber: 0));
     }
   }
 }

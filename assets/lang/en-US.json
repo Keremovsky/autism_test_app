@@ -33,6 +33,46 @@
     "healthCareProfessional": "Health Care Professional",
     "self": "Self",
 
+    "questions": {
+        "0": "Does your child look at you when you call his/her name?",
+        "1": "How easy is it for you to get eye contact with your child?",
+        "2": "Does your child point to indicate that he/she wants something?",
+        "3": "Does your child point to share interest with you?",
+        "4": "Does your child pretend?",
+        "5": "Does your child follow where you're looking?",
+        "6": "If you or someone else in the family is visibly upset, does your child show signs of wanting to comfort them?",
+        "7": "Would you describe your child’s first words as unusual?",
+        "8": "Does your child use simple gestures?",
+        "9": "Does your child stare at nothing with no apparent purpose?"
+    },
+
+    "always": "Always",
+    "usually": "Usually",
+    "sometimes": "Sometimes",
+    "rarely": "Rarely",
+    "never": "Never",
+
+    "veryEasy": "Very Easy",
+    "quiteEasy": "Quite Easy",
+    "quiteDifficult": "Quite Difficult",
+    "veryDifficult": "Very Difficult",
+    "impossible": "Impossible",
+
+    "manyTimesADay": "Many Times A Day",
+    "aFewTimesADay": "A Few Times A Day",
+    "aFewTimesAWeek": "A Few Times A Week",
+    "lessThanOnceAWeek": "Less Than Once A Week",
+    
+    "veryTypical": "Very Typical",
+    "quiteTypical": "Quite Typical",
+    "slightlyUnusual": "Slightly Unusual",
+    "veryUnusual": "Very Unusual",
+    "myChildDoesNotSpeak": "My Child Does Not Speak",
+
+    "nextButton": "Next Question",
+    "backButton": "Previous Question",
+    "finishTestButton": "Finish Test",
+
     "emptyFieldMessage": "Field can't be empty.",
     "notValidAgeMessage": "Age must be a number.",
     "ageCannotBeOverMessage": "Must be less than 37.",

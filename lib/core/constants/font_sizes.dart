@@ -5,5 +5,5 @@ class FontSizeConstant {
   static final fontSize14 = 14.sp;
   static final fontSize16 = 16.sp;
   static final fontSize18 = 18.sp;
-  static final fontSize28 = 28.sp;
+  static final fontSize24 = 24.sp;
 }

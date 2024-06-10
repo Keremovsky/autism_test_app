@@ -33,6 +33,46 @@
     "healthCareProfessional": "Sağlık Çalışanı",
     "self": "Kendi",
 
+    "questions": {
+        "0": "Çocuğunuz ismini söylediğinizde size bakıyor mu?",
+        "1": "Çocuğunuzla göz teması kurmak sizin için ne kadar kolay?",
+        "2": "Çocuğunuz bir şey istediğini belirtmek için işaret ediyor mu?",
+        "3": "Çocuğunuz ilginizi çekmek için bir şeyleri işaret ediyor mu?",
+        "4": "Çocuğunuz rol yapıyor mu?",
+        "5": "Çocuğunuz baktığınız yeri takip ediyor mu?",
+        "6": "Siz veya aileden bir başkası gözle görülür şekilde üzgünse, çocuğunuz onu rahatlatmak istediğine dair işaretler gösteriyor mu?",
+        "7": "Çocuğunuzun ilk kelimelerini olağandışı olarak tanımlar mısınız?",
+        "8": "Çocuğunuz basit jestler kullanıyor mu?",
+        "9": "Çocuğunuz belli bir amacı olmadan boşluğa bakıyor mu?"
+    },
+
+    "always": "Her Zaman",
+    "usually": "Genellikle",
+    "sometimes": "Bazen",
+    "rarely": "Nadiren",
+    "never": "Asla",
+
+    "veryEasy": "Çok Kolay",
+    "quiteEasy": "Oldukça Kolay",
+    "quiteDifficult": "Oldukça Zor",
+    "veryDifficult": "Çok Zor",
+    "impossible": "İmkansız",
+
+    "manyTimesADay": "Günde Birkaç Kez",
+    "aFewTimesADay": "Günde Birkaç Kez",
+    "aFewTimesAWeek": "Haftada Bir Defadan Az",
+    "lessThanOnceAWeek": "Haftada Birkaç Kez",
+    
+    "veryTypical": "Çok Tipik",
+    "quiteTypical": "Oldukça Tipik",
+    "slightlyUnusual": "Biraz Sıradışı",
+    "veryUnusual": "Çok Sıradışı",
+    "myChildDoesNotSpeak": "Çocuğum konuşmuyor",
+
+    "nextButton": "Sonraki Soru",
+    "backButton": "Önceki Soru",
+    "finishTestButton": "Testi Bitir",
+
     "emptyFieldMessage": "Alan boş bırakılamaz.",
     "notValidAgeMessage": "Yaş bir sayı olmalı.",
     "ageCannotBeOverMessage": "37'den küçük olmalı.",

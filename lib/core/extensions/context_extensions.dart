@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 extension SizeExtension on BuildContext {
   double get screenWidth => MediaQuery.of(this).size.width;
@@ -22,6 +23,11 @@ extension ThemeExtension on BuildContext {
   TextStyle? get titleSmall => Theme.of(this).textTheme.titleSmall;
   TextStyle? get titleMedium => Theme.of(this).textTheme.titleMedium;
   TextStyle? get titleLarge => Theme.of(this).textTheme.titleLarge;
+}
+
+extension ProviderExtension on BuildContext {
+  T read<T>() => Provider.of<T>(this, listen: false);
+  T watch<T>() => Provider.of<T>(this);
 }
 
 extension LanguageExtension on BuildContext {
