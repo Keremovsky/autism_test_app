@@ -46,6 +46,7 @@ dependencies:
   flutter_hooks: ^0.20.5
   dropdown_button2: ^2.3.9
   json_annotation: ^4.9.0
+  fluttertoast: ^8.2.6
 
 dev_dependencies:
   flutter_test:

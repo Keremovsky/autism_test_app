@@ -35,5 +35,6 @@
 
     "emptyFieldMessage": "Alan boş bırakılamaz.",
     "notValidAgeMessage": "Yaş bir sayı olmalı.",
-    "ageCannotBeOverMessage": "37'den küçük olmalı."
+    "ageCannotBeOverMessage": "37'den küçük olmalı.",
+    "dataPermissionMessage": "Testi çözmek için veri kullanım izni vermelisiniz."
 }

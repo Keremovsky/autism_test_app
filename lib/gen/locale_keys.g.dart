@@ -33,5 +33,6 @@ abstract class  LocaleKeys {
   static const emptyFieldMessage = 'emptyFieldMessage';
   static const notValidAgeMessage = 'notValidAgeMessage';
   static const ageCannotBeOverMessage = 'ageCannotBeOverMessage';
+  static const dataPermissionMessage = 'dataPermissionMessage';
 
 }

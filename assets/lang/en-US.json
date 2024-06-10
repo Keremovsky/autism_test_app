@@ -35,5 +35,6 @@
 
     "emptyFieldMessage": "Field can't be empty.",
     "notValidAgeMessage": "Age must be a number.",
-    "ageCannotBeOverMessage": "Must be less than 37."
+    "ageCannotBeOverMessage": "Must be less than 37.",
+    "dataPermissionMessage": "You must give permission to solve the test."
 }
