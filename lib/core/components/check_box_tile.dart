@@ -1,4 +1,5 @@
 import 'package:autism_test_app/core/constants/colors.dart';
+import 'package:autism_test_app/core/constants/durations.dart';
 import 'package:autism_test_app/core/constants/size_constants.dart';
 import 'package:autism_test_app/core/extensions/context_extensions.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class CheckBoxTile extends StatelessWidget {
     this.labelStyle,
     this.labelOnLeft = true,
     this.backgroundColor,
-    this.animationDuration = const Duration(milliseconds: 100),
+    this.animationDuration = DurationConstant.checkBoxTileAnimationDuration,
     required this.onChanged,
   });
 

@@ -6,5 +6,6 @@ abstract class  LocaleKeys {
   static const english = 'english';
   static const turkish = 'turkish';
   static const newTestButton = 'newTestButton';
+  static const emptyFieldMessage = 'emptyFieldMessage';
 
 }

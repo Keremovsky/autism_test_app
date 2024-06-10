@@ -3,5 +3,7 @@
     "testCodeHintText": "Enter the test code",
     "english": "English",
     "turkish": "Turkish",
-    "newTestButton": "New Test"
+    "newTestButton": "New Test",
+
+    "emptyFieldMessage": "Field can't be empty."
 }

@@ -3,5 +3,7 @@
     "testCodeHintText": "Test kodunu giriniz",
     "english": "İngilizce",
     "turkish": "Türkçe",
-    "newTestButton": "Yeni Test"
+    "newTestButton": "Yeni Test",
+
+    "emptyFieldMessage": "Alan boş bırakılamaz."
 }

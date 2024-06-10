@@ -24,7 +24,7 @@ class _HomeViewState extends HomeViewState {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: ColorConstant.main,
-        title: const Text(LocaleKeys.appName),
+        title: Text(LocaleKeys.appName.tr()),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -46,7 +46,7 @@ class _HomeViewState extends HomeViewState {
                     ),
                     SizedBox(width: 5.w),
                     CustomButton(
-                      onPressed: () {},
+                      onPressed: onSearchButtonPressed,
                       height: 50.h,
                       width: 50.w,
                       child: Icon(
@@ -71,7 +71,7 @@ class _HomeViewState extends HomeViewState {
                       width: 130.w,
                       child: Text(LocaleKeys.english.tr()),
                     ),
-                    SizedBox(width: 46.w),
+                    const Spacer(),
                     CustomButton(
                       onPressed: onTurkishButtonPressed,
                       width: 130.w,
