@@ -61,7 +61,8 @@ abstract class  LocaleKeys {
   static const veryUnusual = 'veryUnusual';
   static const myChildDoesNotSpeak = 'myChildDoesNotSpeak';
   static const nextButton = 'nextButton';
-  static const backButton = 'backButton';
+  static const previousButton = 'previousButton';
+  static const turnBackButton = 'turnBackButton';
   static const finishTestButton = 'finishTestButton';
   static const testCode = 'testCode';
   static const codeExplanation = 'codeExplanation';

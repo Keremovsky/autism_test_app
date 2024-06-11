@@ -4,6 +4,7 @@ import 'package:autism_test_app/features/test/widgets/test_code_alert_dialog.dar
 import 'package:flutter/material.dart';
 
 abstract class DisplayTestResultViewState extends State<DisplayTestResultView> {
+  // TODO: delete dummyScore
   int dummyScore = 7;
 
   Color? calculateColor(double per) {

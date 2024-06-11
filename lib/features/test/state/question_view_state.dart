@@ -47,6 +47,9 @@ abstract class QuestionViewState extends State<QuestionView> {
     }
 
     context.read<TestController>().setQuestion(widget.pageNumber, selectedAnswerIndex);
-    context.pushRoute(const DisplayTestResultViewRoute());
+    context.router.pushAndPopUntil(
+      const DisplayTestResultViewRoute(),
+      predicate: (route) => route.settings.name == HomeViewRoute.name,
+    );
   }
 }

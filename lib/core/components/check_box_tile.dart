@@ -10,6 +10,8 @@ enum _Type { long, short }
 abstract final class CheckBoxTile extends StatelessWidget {
   final bool value;
   final double? size;
+  final double? height;
+  final double? width;
   final BoxDecoration? decoration;
   final BoxDecoration? activeDecoration;
   final String label;
@@ -26,6 +28,8 @@ abstract final class CheckBoxTile extends StatelessWidget {
     required this.type,
     required this.value,
     this.size,
+    this.height,
+    this.width,
     this.decoration,
     this.activeDecoration,
     required this.label,
@@ -40,7 +44,9 @@ abstract final class CheckBoxTile extends StatelessWidget {
   /// when label's length is long
   const factory CheckBoxTile.long({
     required bool value,
-    double size,
+    double? size,
+    double? height,
+    double? width,
     BoxDecoration? decoration,
     BoxDecoration? activeDecoration,
     required String label,
@@ -55,7 +61,9 @@ abstract final class CheckBoxTile extends StatelessWidget {
   /// when label's length is short, it causes overflow if label is too long
   const factory CheckBoxTile.short({
     required bool value,
-    double size,
+    double? size,
+    double? height,
+    double? width,
     BoxDecoration? decoration,
     BoxDecoration? activeDecoration,
     required String label,
@@ -73,6 +81,8 @@ final class _Long extends CheckBoxTile {
     super.key,
     required super.value,
     super.size,
+    super.height,
+    super.width,
     super.decoration,
     super.activeDecoration,
     required super.label,
@@ -88,58 +98,62 @@ final class _Long extends CheckBoxTile {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onChanged(!value),
-      child: Material(
-        color: backgroundColor,
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            border: borderDecoration,
-            borderRadius: BorderRadius.circular(15.r),
-          ),
-          child: Padding(
-            padding: backgroundColor == null
-                ? EdgeInsets.zero
-                : EdgeInsets.symmetric(
-                    horizontal: SizeConstant.inputFieldHorizontalPadding,
-                    vertical: SizeConstant.inputFieldVerticalPadding,
-                  ),
-            child: Row(
-              children: [
-                if (labelOnLeft == true)
-                  Flexible(
-                    child: _LabelText(
+      child: SizedBox(
+        height: height,
+        width: width,
+        child: Material(
+          color: backgroundColor,
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              border: borderDecoration,
+              borderRadius: BorderRadius.circular(15.r),
+            ),
+            child: Padding(
+              padding: backgroundColor == null
+                  ? EdgeInsets.zero
+                  : EdgeInsets.symmetric(
+                      horizontal: SizeConstant.inputFieldHorizontalPadding,
+                      vertical: SizeConstant.inputFieldVerticalPadding,
+                    ),
+              child: Row(
+                children: [
+                  if (labelOnLeft == true)
+                    Flexible(
+                      child: _LabelText(
+                        label: label,
+                        labelStyle: labelStyle,
+                        labelOnLeft: labelOnLeft,
+                        size: size,
+                      ),
+                    ),
+                  if (labelOnLeft == true)
+                    _GapLong(
                       label: label,
-                      labelStyle: labelStyle,
-                      labelOnLeft: labelOnLeft,
                       size: size,
                     ),
-                  ),
-                if (labelOnLeft == true)
-                  _GapLong(
-                    label: label,
+                  _CheckBox(
                     size: size,
+                    animationDuration: animationDuration,
+                    value: value,
+                    activeDecoration: activeDecoration,
+                    decoration: decoration,
                   ),
-                _CheckBox(
-                  size: size,
-                  animationDuration: animationDuration,
-                  value: value,
-                  activeDecoration: activeDecoration,
-                  decoration: decoration,
-                ),
-                if (labelOnLeft == false)
-                  _GapLong(
-                    label: label,
-                    size: size,
-                  ),
-                if (labelOnLeft == false)
-                  Flexible(
-                    child: _LabelText(
+                  if (labelOnLeft == false)
+                    _GapLong(
                       label: label,
-                      labelStyle: labelStyle,
-                      labelOnLeft: labelOnLeft,
                       size: size,
                     ),
-                  ),
-              ],
+                  if (labelOnLeft == false)
+                    Flexible(
+                      child: _LabelText(
+                        label: label,
+                        labelStyle: labelStyle,
+                        labelOnLeft: labelOnLeft,
+                        size: size,
+                      ),
+                    ),
+                ],
+              ),
             ),
           ),
         ),
@@ -153,6 +167,8 @@ final class _Short extends CheckBoxTile {
     super.key,
     required super.value,
     super.size,
+    super.height,
+    super.width,
     super.decoration,
     super.activeDecoration,
     required super.label,
@@ -168,55 +184,59 @@ final class _Short extends CheckBoxTile {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onChanged(!value),
-      child: Material(
-        color: backgroundColor,
-        borderRadius: BorderRadius.circular(15.r),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            border: borderDecoration,
-            borderRadius: BorderRadius.circular(15.r),
-          ),
-          child: Padding(
-            padding: backgroundColor == null
-                ? EdgeInsets.zero
-                : EdgeInsets.symmetric(
-                    horizontal: SizeConstant.inputFieldHorizontalPadding,
-                    vertical: SizeConstant.inputFieldVerticalPadding,
-                  ),
-            child: Row(
-              children: [
-                if (labelOnLeft == true)
-                  _LabelText(
-                    label: label,
-                    labelStyle: labelStyle,
-                    labelOnLeft: labelOnLeft,
+      child: SizedBox(
+        height: height,
+        width: width,
+        child: Material(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(15.r),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              border: borderDecoration,
+              borderRadius: BorderRadius.circular(15.r),
+            ),
+            child: Padding(
+              padding: backgroundColor == null
+                  ? EdgeInsets.zero
+                  : EdgeInsets.symmetric(
+                      horizontal: SizeConstant.inputFieldHorizontalPadding,
+                      vertical: SizeConstant.inputFieldVerticalPadding,
+                    ),
+              child: Row(
+                children: [
+                  if (labelOnLeft == true)
+                    _LabelText(
+                      label: label,
+                      labelStyle: labelStyle,
+                      labelOnLeft: labelOnLeft,
+                      size: size,
+                    ),
+                  if (labelOnLeft == true)
+                    _GapShort(
+                      label: label,
+                      size: size,
+                    ),
+                  _CheckBox(
                     size: size,
+                    animationDuration: animationDuration,
+                    value: value,
+                    activeDecoration: activeDecoration,
+                    decoration: decoration,
                   ),
-                if (labelOnLeft == true)
-                  _GapShort(
-                    label: label,
-                    size: size,
-                  ),
-                _CheckBox(
-                  size: size,
-                  animationDuration: animationDuration,
-                  value: value,
-                  activeDecoration: activeDecoration,
-                  decoration: decoration,
-                ),
-                if (labelOnLeft == false)
-                  _GapShort(
-                    label: label,
-                    size: size,
-                  ),
-                if (labelOnLeft == false)
-                  _LabelText(
-                    label: label,
-                    labelStyle: labelStyle,
-                    labelOnLeft: labelOnLeft,
-                    size: size,
-                  ),
-              ],
+                  if (labelOnLeft == false)
+                    _GapShort(
+                      label: label,
+                      size: size,
+                    ),
+                  if (labelOnLeft == false)
+                    _LabelText(
+                      label: label,
+                      labelStyle: labelStyle,
+                      labelOnLeft: labelOnLeft,
+                      size: size,
+                    ),
+                ],
+              ),
             ),
           ),
         ),

@@ -3,7 +3,6 @@ import 'package:autism_test_app/core/components/custom_button.dart';
 import 'package:autism_test_app/core/constants/colors.dart';
 import 'package:autism_test_app/core/constants/question_answers.dart';
 import 'package:autism_test_app/core/constants/size_constants.dart';
-import 'package:autism_test_app/core/constants/text_styles.dart';
 import 'package:autism_test_app/core/extensions/context_extensions.dart';
 import 'package:autism_test_app/features/test/state/question_view_state.dart';
 import 'package:autism_test_app/gen/locale_keys.g.dart';
@@ -29,17 +28,14 @@ class _QuestionViewState extends QuestionViewState {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(LocaleKeys.appName.tr()),
-        automaticallyImplyLeading: widget.pageNumber == 0,
+        automaticallyImplyLeading: false,
       ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(SizeConstant.screenPadding),
           child: Column(
             children: [
-              Text(
-                LocaleKeys.questions.tr(gender: widget.pageNumber.toString()),
-                style: context.displayLarge,
-              ),
+              _QuestionText(widget: widget),
               const _Gap40(),
               Expanded(
                 child: ListView.separated(
@@ -49,6 +45,7 @@ class _QuestionViewState extends QuestionViewState {
                       onChanged: (value) => selectAnswer(index),
                       label: QuestionAnswerConstant.questionAnswers[widget.pageNumber][index],
                       labelStyle: context.displayLarge,
+                      height: 55.h,
                       backgroundColor: ColorConstant.whiteText,
                       borderDecoration: Border.all(
                         color: ColorConstant.inputAreaSelectedBackground,
@@ -68,7 +65,13 @@ class _QuestionViewState extends QuestionViewState {
                     CustomButton(
                       onPressed: previousQuestion,
                       width: 140.w,
-                      child: Text(LocaleKeys.backButton.tr()),
+                      child: Text(LocaleKeys.previousButton.tr()),
+                    )
+                  else
+                    CustomButton(
+                      onPressed: previousQuestion,
+                      width: 140.w,
+                      child: Text(LocaleKeys.turnBackButton.tr()),
                     ),
                   const Spacer(),
                   if (widget.pageNumber == 9)
@@ -89,6 +92,26 @@ class _QuestionViewState extends QuestionViewState {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _QuestionText extends StatelessWidget {
+  const _QuestionText({required this.widget});
+
+  final QuestionView widget;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            LocaleKeys.questions.tr(gender: widget.pageNumber.toString()),
+            style: context.displayLarge,
+          ),
+        ),
+      ],
     );
   }
 }

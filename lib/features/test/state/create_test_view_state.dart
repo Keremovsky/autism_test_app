@@ -32,7 +32,7 @@ abstract class CreateTestViewState<T extends StatefulWidget> extends State<T> {
       context.read<TestController>().setPersonSolvedTest(value!);
 
   String? validateDropdownMenu(String? input) {
-    final control = InputFieldValidator.validateNullability(input);
+    final control = InputFieldValidator.validateEmptiness(input);
     return control.toNullable()?.message;
   }
 

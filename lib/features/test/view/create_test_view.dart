@@ -4,10 +4,13 @@ import 'package:autism_test_app/core/components/custom_dropdown_button.dart';
 import 'package:autism_test_app/core/components/custom_text_field.dart';
 import 'package:autism_test_app/core/constants/dropdown_menu_items.dart';
 import 'package:autism_test_app/core/constants/size_constants.dart';
+import 'package:autism_test_app/core/extensions/context_extensions.dart';
 import 'package:autism_test_app/core/utils/input_formatters.dart';
+import 'package:autism_test_app/features/test/controller/test_controller.dart';
 import 'package:autism_test_app/features/test/state/create_test_view_state.dart';
 import 'package:autism_test_app/gen/locale_keys.g.dart';
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,7 +28,16 @@ class _CreateTestViewState extends CreateTestViewState {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text(LocaleKeys.appName.tr())),
+      appBar: AppBar(
+        title: Text(LocaleKeys.appName.tr()),
+        leading: IconButton(
+          icon: const BackButtonIcon(),
+          onPressed: () {
+            context.read<TestController>().clearTest();
+            context.maybePop();
+          },
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(SizeConstant.screenPadding),
@@ -40,6 +52,7 @@ class _CreateTestViewState extends CreateTestViewState {
                       onSaved: onSavedAge,
                       validator: validateAge,
                       inputFormatters: InputFieldFormatters.ageFormatter,
+                      textInputType: TextInputType.number,
                       hintText: LocaleKeys.ageHintText.tr(),
                     ),
                     const Spacer(),
@@ -80,7 +93,7 @@ class _CreateTestViewState extends CreateTestViewState {
                 ),
                 const Spacer(),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5.w),
+                  padding: EdgeInsets.symmetric(horizontal: 7.w),
                   child: CheckBoxTile.long(
                     onChanged: onDataPermissionGivenChanged,
                     label: LocaleKeys.dataUsageVerificationText.tr(),
@@ -102,12 +115,12 @@ class _CreateTestViewState extends CreateTestViewState {
   }
 }
 
-class _Gap13 extends StatelessWidget {
-  const _Gap13();
+class _Gap20 extends StatelessWidget {
+  const _Gap20();
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height: 13.h);
+    return SizedBox(height: 20.h);
   }
 }
 
@@ -120,11 +133,11 @@ class _Gap18 extends StatelessWidget {
   }
 }
 
-class _Gap20 extends StatelessWidget {
-  const _Gap20();
+class _Gap13 extends StatelessWidget {
+  const _Gap13();
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height: 20.h);
+    return SizedBox(height: 13.h);
   }
 }

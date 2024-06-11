@@ -23,31 +23,42 @@ class TestCodeAlertDialog extends StatelessWidget {
             style: context.displaySmall,
           ),
           SizedBox(height: 30.h),
-          Row(
-            children: [
-              Expanded(
-                child: Text(
-                  testCode,
-                  style: context.bodyMedium,
-                ),
-              ),
-              const Spacer(),
-              CustomButton(
-                onPressed: () {
-                  Clipboard.setData(ClipboardData(text: testCode));
-                },
-                height: 35.h,
-                width: 35.w,
-                child: Icon(Icons.copy, size: 14.r),
-              ),
-            ],
-          ),
+          _CodeRow(testCode: testCode),
         ],
       ),
       actions: <Widget>[
         TextButton(
           onPressed: () => Navigator.pop(context),
           child: Text(LocaleKeys.ok.tr()),
+        ),
+      ],
+    );
+  }
+}
+
+class _CodeRow extends StatelessWidget {
+  const _CodeRow({required this.testCode});
+
+  final String testCode;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            testCode,
+            style: context.bodyMedium,
+          ),
+        ),
+        const Spacer(),
+        CustomButton(
+          onPressed: () {
+            Clipboard.setData(ClipboardData(text: testCode));
+          },
+          height: 35.h,
+          width: 35.w,
+          child: Icon(Icons.copy, size: 14.r),
         ),
       ],
     );

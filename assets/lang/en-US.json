@@ -69,8 +69,9 @@
     "veryUnusual": "Very Unusual",
     "myChildDoesNotSpeak": "My Child Does Not Speak",
 
-    "nextButton": "Next Question",
-    "backButton": "Previous Question",
+    "nextButton": "Next",
+    "previousButton": "Previous",
+    "turnBackButton": "Turn Back",
     "finishTestButton": "Finish Test",
 
     "testCode": "Test Code",

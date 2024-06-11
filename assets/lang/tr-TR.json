@@ -70,7 +70,8 @@
     "myChildDoesNotSpeak": "Çocuğum konuşmuyor",
 
     "nextButton": "Sonraki Soru",
-    "backButton": "Önceki Soru",
+    "previousButton": "Önceki Soru",
+    "turnBackButton": "Geri Dön",
     "finishTestButton": "Testi Bitir",
 
     "testCode": "Test Kodu",

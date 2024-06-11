@@ -13,14 +13,6 @@ class InputFieldValidator {
     return none();
   }
 
-  static Option<ValueFailureModel> validateNullability<T>(T? input) {
-    if (input == null) {
-      return some(ValueFailureModel.invalidInput(LocaleKeys.emptyFieldMessage.tr()));
-    }
-
-    return none();
-  }
-
   static Option<ValueFailureModel> validateTestCode(String? input) {
     if (input == null || input.isEmpty) {
       return some(ValueFailureModel.invalidInput(LocaleKeys.emptyFieldMessage.tr()));

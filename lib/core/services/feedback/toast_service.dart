@@ -18,7 +18,7 @@ class ToastService implements IToastService {
       toastLength: Toast.LENGTH_SHORT,
       gravity: gravity ?? ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
-      backgroundColor: ColorConstant.main,
+      backgroundColor: ColorConstant.toastBackground,
       textColor: Colors.white,
       fontSize: FontSizeConstant.fontSize16,
     );

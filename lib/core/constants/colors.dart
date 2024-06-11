@@ -13,6 +13,7 @@ class ColorConstant {
   static const checkboxDisabled = Color.fromRGBO(250, 250, 250, 1);
   static const dropdownMenuIcon = Color.fromRGBO(144, 144, 144, 1);
   static const scaffoldBackground = Color.fromRGBO(249, 249, 249, 1);
+  static const toastBackground = Color.fromRGBO(48, 114, 182, 0.95);
 
   static const inputAreaSelectedBackground = Color.fromRGBO(52, 134, 218, 0.2);
   static const inputAreaBorder = Color.fromRGBO(208, 208, 208, 1);
