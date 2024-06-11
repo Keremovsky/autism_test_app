@@ -1,5 +1,5 @@
 import 'package:autism_test_app/core/extensions/context_extensions.dart';
-import 'package:autism_test_app/core/services/feedback/toast_service.dart';
+import 'package:autism_test_app/core/services/toast/toast_service.dart';
 import 'package:autism_test_app/features/test/controller/test_controller.dart';
 import 'package:autism_test_app/features/test/view/question_view.dart';
 import 'package:autism_test_app/router/router.dart';

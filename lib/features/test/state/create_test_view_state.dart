@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:autism_test_app/core/services/feedback/toast_service.dart';
+import 'package:autism_test_app/core/services/toast/toast_service.dart';
 import 'package:autism_test_app/core/utils/validators.dart';
 import 'package:autism_test_app/features/test/controller/test_controller.dart';
 import 'package:autism_test_app/gen/locale_keys.g.dart';
